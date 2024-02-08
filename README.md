@@ -1,4 +1,4 @@
-# RE8 Aim Dependent Crosshair
+# RE8 Aim-Dependent Crosshair
 REFramework script for Resident Evil Village.  
 Prevents the crosshair reticle from being drawn unless the player is aiming a weapon.  
 First and Third-Person perspective supported.
