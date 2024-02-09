@@ -33,17 +33,6 @@ local function isPlayerAiming()
     return nil
 end
 
-local reticle_names = {
-    "ReticleGUI",
-    "CH8ReticleGUI",
-    "CH9ReticleGUI",
-    "GUIReticle"
-}
-
-for i, v in ipairs(reticle_names) do
-    reticle_names[v] = true
-end
-
 re.on_pre_gui_draw_element(function(element, context)
 
     local game_object = element:call("get_GameObject")
@@ -51,7 +40,7 @@ re.on_pre_gui_draw_element(function(element, context)
 
     local name = game_object:call("get_Name")
 
-    if reticle_names[name] then
+    if string.find(name, "Reticle") then
         if not isPlayerAiming() then
             return false
         end
