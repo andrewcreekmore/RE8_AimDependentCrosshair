@@ -14,7 +14,7 @@ Main campaign and Shadows of Rose DLC supported.
 - extract <strong>only</strong> the script file, `RE8_AimDependentCrosshair.lua`, and place it into your game directory's new `reframework/autorun` folder
 
 #### Using FluffyModManager:
-- place the entire .zip file into `ModManager\Games\RE8\Mods`
+- place the entire .zip file into `ModManager/Games/RE8\Mods`
 - toggle on/off Aim-Dependent Crosshair from the mod manager's GUI menu
 
 ## Acknowledgements
