@@ -4,7 +4,7 @@
 -- Author: Andrew Creekmore
 -- Version: 1.2 
 -- Description: prevents the crosshair reticle from being drawn unless the player is aiming a weapon
--- Special Thanks to: praydog; alphaZomega; SilverEzredes
+-- Special thanks to: praydog
 --==============================
 
 log.info("[RE8_AimDependentCrosshair] loaded")
