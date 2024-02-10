@@ -2,9 +2,9 @@
 -- RE8 Aim-Dependent Crosshair 
 
 -- Author: Andrew Creekmore
--- Version: 1.1 
+-- Version: 1.2 
 -- Description: prevents the crosshair reticle from being drawn unless the player is aiming a weapon
--- Special thanks to: praydog
+-- Special Thanks to: praydog; alphaZomega; SilverEzredes
 --==============================
 
 log.info("[RE8_AimDependentCrosshair] loaded")
@@ -33,6 +33,30 @@ local function isPlayerAiming()
     return nil
 end
 
+local function isRoseAimingPowers()
+
+    local propsManager = sdk.get_managed_singleton(sdk.game_namespace("PropsManager"))
+
+    if propsManager then 
+        local player = propsManager:call("get_Player")
+        local playerUpdaterComponent = nil
+        local playerStatus = nil
+
+        if player then
+            local playerUpdaterComponent = player:call("getComponent(System.Type)", sdk.typeof("app.PlayerUpdaterBase"))
+            if playerUpdaterComponent then
+                playerStatus = playerUpdaterComponent:call("get_playerstatus")
+            end
+        end
+
+        if playerStatus then
+            return playerStatus:call("get_isESPAim") or playerStatus:call("get_isESPFreezeAim")
+        end 
+    end
+
+    return nil
+end
+
 re.on_pre_gui_draw_element(function(element, context)
 
     local game_object = element:call("get_GameObject")
@@ -41,7 +65,11 @@ re.on_pre_gui_draw_element(function(element, context)
     local name = game_object:call("get_Name")
 
     if string.find(name, "Reticle") then
-        if not isPlayerAiming() then return false end
+        if not isPlayerAiming() then
+            if not isRoseAimingPowers() then
+                return false
+            end
+        end
     end
 
     return true
@@ -50,6 +78,7 @@ end)
 
 -- script-generated UI (debug)
 --========================
--- re.on_draw_ui(function()
---     imgui.text("isPlayerAiming: " .. tostring(isPlayerAiming()))
--- end)
+--re.on_draw_ui(function()
+    --imgui.text("isPlayerAiming: " .. tostring(isPlayerAiming()))
+    --imgui.text("isRoseAimingPowers: " .. tostring(isRoseAimingPowers()))
+--end)
