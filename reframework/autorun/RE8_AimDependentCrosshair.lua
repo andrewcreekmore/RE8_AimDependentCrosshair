@@ -31,7 +31,7 @@ local function isPlayerAiming()
 end
 
 local function isRoseAimingPowers()
-
+    
     if propsManager then 
         player = propsManager:call("get_Player")
         if player then
@@ -57,7 +57,6 @@ re.on_pre_gui_draw_element(function(element, context)
     local name = game_object:call("get_Name")
 
     if string.find(name, "Reticle") then
-
         if not isPlayerAiming() then
             if not isRoseAimingPowers() then
                 return false
