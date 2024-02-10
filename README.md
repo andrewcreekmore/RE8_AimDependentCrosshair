@@ -1,7 +1,8 @@
 # RE8 Aim-Dependent Crosshair
 REFramework script for Resident Evil Village.  
 Prevents the crosshair reticle from being drawn unless the player is aiming a weapon.  
-First and Third-Person perspective supported.
+First and Third-Person perspective supported.  
+Main campaign and Shadows of Rose DLC supported.
 
 ## Installation
 - download [REFramework](https://github.com/praydog/REFramework/releases) for RE8
