@@ -2,9 +2,9 @@
 -- RE8 Aim-Dependent Crosshair 
 
 -- Author: Andrew Creekmore
--- Version: 1.0 
+-- Version: 1.1 
 -- Description: prevents the crosshair reticle from being drawn unless the player is aiming a weapon
--- Special Thanks to: praydog; alphaZomega; SilverEzredes
+-- Special thanks to: praydog
 --==============================
 
 log.info("[RE8_AimDependentCrosshair] loaded")
@@ -41,9 +41,7 @@ re.on_pre_gui_draw_element(function(element, context)
     local name = game_object:call("get_Name")
 
     if string.find(name, "Reticle") then
-        if not isPlayerAiming() then
-            return false
-        end
+        if not isPlayerAiming() then return false end
     end
 
     return true
