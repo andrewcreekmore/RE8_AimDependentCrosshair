@@ -1,8 +1,17 @@
 # RE8 Aim-Dependent Crosshair
 REFramework script for Resident Evil Village.  
-Prevents the crosshair reticle from being drawn unless the player is aiming a weapon.  
+Prevents the crosshair reticle from being drawn unless configurable conditions are met.  
 First and Third-Person perspective supported.  
 Main campaign and Shadows of Rose DLC supported.
+
+## Usage
+The following options are available, (in combat, out of combat, or both):
+ - disable crosshair whenever not aiming (mod default out of combat)
+ - disable crosshair only when sprinting (mod default in combat)
+   
+Options are configurable from the REFramework script-generated UI.  
+
+Note that mantling over obstacles disables the crosshair until the player aims. This behavior is present in the vanilla game and is not affected by this mod.
 
 ## Installation
 - download [REFramework](https://github.com/praydog/REFramework/releases) for RE8
@@ -14,7 +23,7 @@ Main campaign and Shadows of Rose DLC supported.
 - extract <strong>only</strong> the script file, `RE8_AimDependentCrosshair.lua`, and place it into your game directory's new `reframework/autorun` folder
 
 #### Using FluffyModManager:
-- place the entire .zip file into `ModManager\Games\RE8\Mods`
+- place the entire .zip file into `ModManager/Games/RE8/Mods`
 - toggle on/off Aim-Dependent Crosshair from the mod manager's GUI menu
 
 ## Acknowledgements
