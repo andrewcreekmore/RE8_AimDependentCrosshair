@@ -6,8 +6,8 @@ Main campaign and Shadows of Rose DLC supported.
 
 ## Usage
 The following options are available (in/out of combat, or both):
- - disable crosshair whenever not aiming (mod default out of combat)
- - disable crosshair only when sprinting (mod default in combat)
+ - disable crosshair whenever not aiming (mod <strong>default</strong> out of combat)
+ - disable crosshair only when sprinting (mod <strong>default</strong> in combat)
    
 Options are configurable from the REFramework script-generated UI.  
 
