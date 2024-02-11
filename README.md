@@ -5,7 +5,7 @@ First and Third-Person perspective supported.
 Main campaign and Shadows of Rose DLC supported.
 
 ## Usage
-The following options are available, (in combat, out of combat, or both):
+The following options are available (in/out of combat, or both):
  - disable crosshair whenever not aiming (mod default out of combat)
  - disable crosshair only when sprinting (mod default in combat)
    
